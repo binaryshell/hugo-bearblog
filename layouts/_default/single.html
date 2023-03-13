@@ -17,4 +17,12 @@
   <a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>
   {{ end }}
 </p>
+<p>
+  {{ if (ne .Site.Params.hidePageNav true) }}
+  {{ with .Page.Next }}
+  Next: <a href="{{ .Permalink }}">{{ .Title }}</a>
+  {{- partial "date.html" . -}}
+  {{ end }}
+  {{ end }}
+</p>
 {{ end }}
