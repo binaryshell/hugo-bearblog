@@ -1,3 +1,4 @@
+{{ if ne .Site.Params.hideDate true }}
 <span>
     <i>
         <time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>
@@ -5,3 +6,4 @@
         </time>
     </i>
 </span>
+{{ end }}
